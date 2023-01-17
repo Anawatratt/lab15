@@ -2,7 +2,24 @@
 using namespace std;
 
 template <typename T>
-void insertionSort(T d[],int N){
+void insertionSort(T d[],int N)
+{
+	int x;
+	int y;
+	for(int i = 0; i < N-1; i++){
+		y=i;
+		while(0-1<y){
+		if(d[y]<d[y+1]){
+			x=d[y+1];
+			d[y+1]=d[y];
+			d[y]=x;
+		}
+			y--;
+		}
+		cout<<"Pass "<<i+1<<":";
+		for(int i = 0; i < 10; i++) cout << d[i] << " ";
+		cout<<"\n";	
+	}
 
 }
 
@@ -17,3 +34,4 @@ int main(){
 	cout << "\nSorted Array:";
 	for(int i = 0; i < 10; i++) cout << a[i] << " ";	
 }
+
